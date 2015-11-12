@@ -1,0 +1,18 @@
+<html>
+  <script src="../build/bundle.js" ></script>
+  <script>
+    function callIt(){
+      var callee = window.location.href.replace("caller", "callee")
+
+      LaunchableApp
+      .launch(callee, window.open("", "_blank"), ["some", "values", {given: "here"}])
+      .then(function(result){
+        console.log("Result was", result)
+      })
+    }
+  </script>
+  <body>
+    Test
+    <button onClick="callIt()">Launch service</button>
+  </body>
+</html>

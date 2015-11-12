@@ -1,0 +1,13 @@
+<html>
+  <script src="../build/bundle.js" ></script>
+  <script>
+    LaunchableApp.onLaunch(function(params, resolve, reject){
+      var response = prompt("Called with params: " + JSON.stringify(params, null, 2));
+      resolve({"So...": response});
+      window.close();
+    })
+  </script>
+  <body>
+    Test receiver
+  </body>
+</html>

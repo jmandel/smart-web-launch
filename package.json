@@ -1,0 +1,19 @@
+{
+  "name": "smart-web-launch",
+  "version": "0.0.1",
+  "description": "Launch an external SMART app for workflow orchestration",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Josh Mandel",
+  "license": "Apache 2.0",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "babel-polyfill": "^6.1.4",
+    "babel-cli": "^6.1.4",
+    "babel-loader": "^6.1.0",
+    "babel-preset-es2015": "^6.1.4",
+    "webpack": "^1.12.4"
+  }
+}
