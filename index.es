@@ -13,7 +13,7 @@ export let onLaunch = (handler, {whitelist=null}={})=>{
   const params = {}
   const options = {win: win, origin: origin, params: params}
 
-  if (whitelist && whitelist.filter((x) => x === origin).length === 0) {
+  if (whitelist && whitelist.indexOf(origin) === -1) {
     return;
   }
 

@@ -88,9 +88,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var params = {};
 	  var options = { win: win, origin: origin, params: params };
 
-	  if (whitelist && whitelist.filter(function (x) {
-	    return x === origin;
-	  }).length === 0) {
+	  if (whitelist && whitelist.indexOf(origin) === -1) {
 	    return;
 	  }
 
