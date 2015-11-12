@@ -1,5 +1,12 @@
 <html>
   <script src="../build/bundle.js" ></script>
+  <boedy>
+    Test
+    <button onClick="callIt()">Launch service</button>
+    <br/>
+    <textarea id="result" style="width: 100%; height: 80%">
+    </textarea>
+  </body>
   <script>
     function callIt(){
       var callee = window.location.href.replace("caller", "callee")
@@ -7,12 +14,9 @@
       LaunchableApp
       .launch(callee, window.open("", "_blank"), ["some", "values", {given: "here"}])
       .then(function(result){
+        document.getElementById("result").innerHTML = JSON.stringify(result, null, 2)
         console.log("Result was", result)
       })
     }
   </script>
-  <body>
-    Test
-    <button onClick="callIt()">Launch service</button>
-  </body>
 </html>
